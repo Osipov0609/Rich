@@ -7,7 +7,7 @@
         "experience": "8 years",
         "phone": "+374 91 00-00-00",
         "email": "armen@richhouse.am",
-        "image": "http://localhost:5000/images/realtors/80.jpg"
+        "image": "/images/realtors/80.jpg"
     },
     {
         "id": 37,
@@ -17,7 +17,7 @@
         "experience": "5 years",
         "phone": "+374 94 00-00-00",
         "email": "ani@richhouse.am",
-        "image": "http://localhost:5000/images/realtors/81.jpg"
+        "image": "/images/realtors/81.jpg"
     },
     {
         "id": 38,
@@ -27,7 +27,7 @@
         "experience": "10 years",
         "phone": "+374 77 00-00-00",
         "email": "karen@richhouse.am",
-        "image": "http://localhost:5000/images/realtors/82.jpg"
+        "image": "/images/realtors/82.jpg"
     },
     {
         "id": 39,
@@ -37,6 +37,6 @@
         "experience": "4 years",
         "phone": "+374 55 00-00-00",
         "email": "lilit@richhouse.am",
-        "image": "http://localhost:5000/images/realtors/83.jpg"
+        "image": "/images/realtors/83.jpg"
     }
 ]

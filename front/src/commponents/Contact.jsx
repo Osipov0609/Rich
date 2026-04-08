@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import './css/Contact.css';
-import Logo2 from '../images/logo/logo2.jpg';
+// import Logo2 from '../images/logo/logo2.jpg';
 
 export default function Contact() {
 
@@ -48,7 +48,7 @@ export default function Contact() {
     <div className='contact'>
       <h4>Contact us to stay connected with our team...</h4>
       <div className="box">
-        <img src={Logo2} alt="Logo" />
+        <img src={process.env.PUBLIC_URL + '/images/logo/logo2.jpg'} alt="Logo2" />
         <form className="contact_info" onSubmit={handleSubmit}>
           <input
             type="text"

@@ -18,12 +18,12 @@ export default function Apartament() {
     const [repair, setRepair] = useState("");
     const [type, setType] = useState("");
 
+    const API_URL = "http://localhost:5000";
 
     const [likes, setLikes] = useState(() => {
         const saved = localStorage.getItem('likedApartments');
         return saved ? JSON.parse(saved) : {};
     });
-
 
     const [cart, setCart] = useState(() => {
         const saved = localStorage.getItem('cartItems');
@@ -36,14 +36,11 @@ export default function Apartament() {
         localStorage.setItem('likedApartments', JSON.stringify(newLikes));
     };
 
-
     const toggleCart = (id) => {
         const newCart = { ...cart, [id]: !cart[id] };
         setCart(newCart);
         localStorage.setItem('cartItems', JSON.stringify(newCart));
-        
-
-        window.dispatchEvent(new Event('storage')); 
+        window.dispatchEvent(new Event('storage'));
     };
 
     const fetchData = useCallback(async () => {
@@ -55,7 +52,7 @@ export default function Apartament() {
             if (repair) params.append('repair', repair);
             if (type) params.append('type', type);
 
-            const res = await fetch(`http://localhost:5000/apartments?${params.toString()}`);
+            const res = await fetch(`${API_URL}/apartments?${params.toString()}`);
             const result = await res.json();
             setData(result);
         } catch (error) {
@@ -97,6 +94,7 @@ export default function Apartament() {
                         <option value="Designer">Designer</option>
                         <option value="Euro">Euro</option>
                     </select>
+
                     <select value={type} onChange={(e) => setType(e.target.value)}>
                         <option value="">Type (All)</option>
                         <option value="sale">Sale</option>
@@ -106,16 +104,16 @@ export default function Apartament() {
 
                 <div className="results">
                     {data.map((item) => {
+                        // Զտում ենք նկարները և ստուգում, որ null չլինեն
                         const apartmentImages = [
                             item.image, item.image2, item.image3, item.image4
                         ].filter(Boolean);
 
                         const isLiked = likes[item.id];
-                        const isInCart = cart[item.id]; 
+                        const isInCart = cart[item.id];
 
                         return (
                             <div key={item.id} className='apartament-card'>
-
                                 <div className="like-icon-container" onClick={() => toggleLike(item.id)} style={{ cursor: 'pointer' }}>
                                     {isLiked ? (
                                         <FaHeart className='fafaHeart' style={{ color: 'red', fontSize: '22px' }} />
@@ -133,6 +131,7 @@ export default function Apartament() {
                                 >
                                     {apartmentImages.map((imgUrl, index) => (
                                         <SwiperSlide key={index}>
+                                            {/* Այստեղ imgUrl-ը արդեն գալիս է որպես "/images/..." JSON-ից */}
                                             <img src={imgUrl} alt={`${item.location} - ${index + 1}`} />
                                         </SwiperSlide>
                                     ))}
@@ -146,14 +145,14 @@ export default function Apartament() {
                                         <p><strong>Building:</strong> {item.building}</p>
                                         <p><strong>Furnishing:</strong> {item.furnishing}</p>
                                         <p><strong>Type:</strong> {item.type}</p>
-                                        
-                                        <FiShoppingCart 
-                                            className='fafaShopping' 
-                                            style={{ 
-                                                color: isInCart ? "#ff9900" : "black", 
+
+                                        <FiShoppingCart
+                                            className='fafaShopping'
+                                            style={{
+                                                color: isInCart ? "#ff9900" : "black",
                                                 cursor: 'pointer',
                                                 fontSize: '24px'
-                                            }} 
+                                            }}
                                             onClick={() => toggleCart(item.id)}
                                         />
                                     </div>

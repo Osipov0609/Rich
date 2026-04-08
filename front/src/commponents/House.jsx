@@ -40,6 +40,7 @@ export default function Home() {
         setCart(newCart);
         localStorage.setItem('cartHouses', JSON.stringify(newCart));
         
+        // Սա թարմացնում է Header-ը իրական ժամանակում
         window.dispatchEvent(new Event('storage')); 
     };
 
@@ -74,6 +75,8 @@ export default function Home() {
                         <option value="One">One</option>
                         <option value="Two">Two</option>
                         <option value="Three">Three</option>
+                        <option value="Four">Four</option>
+                        <option value="Five">Five</option>
                     </select>
 
                     <select value={building} onChange={(e) => setBuilding(e.target.value)}>
@@ -85,7 +88,7 @@ export default function Home() {
                     <select value={furnishing} onChange={(e) => setFurnishing(e.target.value)}>
                         <option value="">Furnishing (All)</option>
                         <option value="Fully equipped">Fully equipped</option>
-                        <option value="Partially equipped">Partially equipped</option>
+                        <option value="Partially">Partially</option>
                         <option value="Not equipped">Not equipped</option>
                     </select>
 
@@ -93,7 +96,8 @@ export default function Home() {
                         <option value="">Repair (All)</option>
                         <option value="Repaired">Repaired</option>
                         <option value="Designer">Designer</option>
-                        <option value="Euro">Euro</option>
+                        <option value="Partially">Partially</option>
+                        <option value="Old">Old</option>
                     </select>
 
                     <select value={type} onChange={(e) => setType(e.target.value)}>
@@ -103,7 +107,7 @@ export default function Home() {
                     </select>
 
                     <select value={propertyType} onChange={(e) => setPropertyType(e.target.value)}>
-                        <option value="">propertyType (All)</option>
+                        <option value="">Property Type (All)</option>
                         <option value="house">House</option>
                         <option value="townhouse">TownHouse</option>
                     </select>
@@ -125,7 +129,7 @@ export default function Home() {
                                     {isLiked ? (
                                         <FaHeart className='fafaHeart' style={{ color: 'red', fontSize: '22px' }} />
                                     ) : (
-                                        <FaRegHeart className='fafaHeart' style={{ fontSize: '22px' }} />
+                                        <FaRegHeart className='fafaHeart' style={{ color: 'white', fontSize: '22px' }} />
                                     )}
                                 </div>
 

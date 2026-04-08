@@ -9,8 +9,8 @@
     "repair": "Repaired",
     "price": 120000,
     "location": "Yerevan",
-    "image2": "http://localhost:5000/images/house/16.jpg",
-    "image": "http://localhost:5000/images/house/15.jpg",
+    "image": "/images/house/15.jpg",
+    "image2": "/images/house/16.jpg",
     "image3": null,
     "image4": null,
     "image5": null,
@@ -26,10 +26,10 @@
     "repair": "Partially",
     "price": 95000,
     "location": "Vanadzor",
-    "image": "http://localhost:5000/images/house/17.jpg",
-    "image2": "http://localhost:5000/images/house/18.jpg",
-    "image3": "http://localhost:5000/images/house/19.jpg",
-    "image4": "http://localhost:5000/images/house/20.jpg",
+    "image": "/images/house/17.jpg",
+    "image2": "/images/house/18.jpg",
+    "image3": "/images/house/19.jpg",
+    "image4": "/images/house/20.jpg",
     "image5": null,
     "image6": null
   },
@@ -43,12 +43,12 @@
     "repair": "Designer",
     "price": 180000,
     "location": "Yerevan",
-    "image": "http://localhost:5000/images/house/21.jpg",
-    "image2": "http://localhost:5000/images/house/22.jpg",
-    "image3": "http://localhost:5000/images/house/23.jpg",
-    "image4": "http://localhost:5000/images/house/24.jpg",
-    "image5": "http://localhost:5000/images/house/25.jpg",
-    "image6": "http://localhost:5000/images/house/26.jpg"
+    "image": "/images/house/21.jpg",
+    "image2": "/images/house/22.jpg",
+    "image3": "/images/house/23.jpg",
+    "image4": "/images/house/24.jpg",
+    "image5": "/images/house/25.jpg",
+    "image6": "/images/house/26.jpg"
   },
   {
     "id": 14,
@@ -60,10 +60,10 @@
     "repair": "Old",
     "price": 70000,
     "location": "Gyumri",
-    "image": "http://localhost:5000/images/house/27.jpg",
-    "image2": "http://localhost:5000/images/house/28.jpg",
-    "image3": "http://localhost:5000/images/house/29.jpg",
-    "image4": "http://localhost:5000/images/house/30.jpg"
+    "image": "/images/house/27.jpg",
+    "image2": "/images/house/28.jpg",
+    "image3": "/images/house/29.jpg",
+    "image4": "/images/house/30.jpg"
   },
   {
     "id": 15,
@@ -75,10 +75,10 @@
     "repair": "Repaired",
     "price": 140000,
     "location": "Dilijan",
-    "image": "http://localhost:5000/images/house/31.jpg",
-    "image2": "http://localhost:5000/images/house/32.jpg",
-    "image3": "http://localhost:5000/images/house/33.jpg",
-    "image4": "http://localhost:5000/images/house/34.jpg",
+    "image": "/images/house/31.jpg",
+    "image2": "/images/house/32.jpg",
+    "image3": "/images/house/33.jpg",
+    "image4": "/images/house/34.jpg",
     "image5": null,
     "image6": null
   },
@@ -92,10 +92,10 @@
     "repair": "Repaired",
     "price": 800,
     "location": "Yerevan",
-    "image": "http://localhost:5000/images/house/35.jpg",
-    "image2": "http://localhost:5000/images/house/36.jpg",
-    "image3": "http://localhost:5000/images/house/37.jpg",
-    "image4": "http://localhost:5000/images/house/38.jpg"
+    "image": "/images/house/35.jpg",
+    "image2": "/images/house/36.jpg",
+    "image3": "/images/house/37.jpg",
+    "image4": "/images/house/38.jpg"
   },
   {
     "id": 17,
@@ -107,11 +107,11 @@
     "repair": "Partially",
     "price": 600,
     "location": "Vanadzor",
-    "image": "http://localhost:5000/images/house/39.jpg",
-    "image2": "http://localhost:5000/images/house/40.jpg",
-    "image3": "http://localhost:5000/images/house/41.jpg",
-    "image4": "http://localhost:5000/images/house/42.jpg",
-    "image5": "http://localhost:5000/images/house/43.jpg"
+    "image": "/images/house/39.jpg",
+    "image2": "/images/house/40.jpg",
+    "image3": "/images/house/41.jpg",
+    "image4": "/images/house/42.jpg",
+    "image5": "/images/house/43.jpg"
   },
   {
     "id": 18,
@@ -123,9 +123,9 @@
     "repair": "Designer",
     "price": 900,
     "location": "Yerevan",
-    "image": "http://localhost:5000/images/house/44.jpg",
-    "image2": "http://localhost:5000/images/house/45.jpg",
-    "image3": "http://localhost:5000/images/house/46.jpg",
+    "image": "/images/house/44.jpg",
+    "image2": "/images/house/45.jpg",
+    "image3": "/images/house/46.jpg",
     "image4": null
   },
   {
@@ -138,8 +138,8 @@
     "repair": "Old",
     "price": 500,
     "location": "Gyumri",
-    "image": "http://localhost:5000/images/house/47.jpg",
-    "image2": "http://localhost:5000/images/house/48.jpg",
+    "image": "/images/house/47.jpg",
+    "image2": "/images/house/48.jpg",
     "image3": null,
     "image4": null
   },
@@ -153,9 +153,9 @@
     "repair": "Repaired",
     "price": 1000,
     "location": "Dilijan",
-    "image": "http://localhost:5000/images/house/49.jpg",
-    "image2": "http://localhost:5000/images/house/50.jpg",
-    "image3": "http://localhost:5000/images/house/51.jpg",
+    "image": "/images/house/49.jpg",
+    "image2": "/images/house/50.jpg",
+    "image3": "/images/house/51.jpg",
     "image4": null
   },
   {
@@ -168,10 +168,10 @@
     "repair": "Repaired",
     "price": 110000,
     "location": "Yerevan",
-    "image": "http://localhost:5000/images/townhouse/52.jpg",
-    "image2": "http://localhost:5000/images/townhouse/53.jpg",
-    "image3": "http://localhost:5000/images/townhouse/54.jpg",
-    "image4": "http://localhost:5000/images/townhouse/55.jpg"
+    "image": "/images/townhouse/52.jpg",
+    "image2": "/images/townhouse/53.jpg",
+    "image3": "/images/townhouse/54.jpg",
+    "image4": "/images/townhouse/55.jpg"
   },
   {
     "id": 22,
@@ -183,11 +183,11 @@
     "repair": "Partially",
     "price": 90000,
     "location": "Yerevan",
-    "image": "http://localhost:5000/images/townhouse/56.jpg",
-    "image2": "http://localhost:5000/images/townhouse/57.jpg",
-    "image3": "http://localhost:5000/images/townhouse/58.jpg",
-    "image4": "http://localhost:5000/images/townhouse/59.jpg",
-    "image5": "http://localhost:5000/images/townhouse/60.jpg"
+    "image": "/images/townhouse/56.jpg",
+    "image2": "/images/townhouse/57.jpg",
+    "image3": "/images/townhouse/58.jpg",
+    "image4": "/images/townhouse/59.jpg",
+    "image5": "/images/townhouse/60.jpg"
   },
   {
     "id": 23,
@@ -199,10 +199,10 @@
     "repair": "Designer",
     "price": 130000,
     "location": "Abovyan",
-    "image": "http://localhost:5000/images/townhouse/61.jpg",
-    "image2": "http://localhost:5000/images/townhouse/62.jpg",
-    "image3": "http://localhost:5000/images/townhouse/63.jpg",
-    "image4": "http://localhost:5000/images/townhouse/64.jpg"
+    "image": "/images/townhouse/61.jpg",
+    "image2": "/images/townhouse/62.jpg",
+    "image3": "/images/townhouse/63.jpg",
+    "image4": "/images/townhouse/64.jpg"
   },
   {
     "id": 24,
@@ -214,8 +214,8 @@
     "repair": "Old",
     "price": 80000,
     "location": "Gyumri",
-    "image": "http://localhost:5000/images/townhouse/65.jpg",
-    "image2": "http://localhost:5000/images/townhouse/66.jpg",
+    "image": "/images/townhouse/65.jpg",
+    "image2": "/images/townhouse/66.jpg",
     "image3": null,
     "image4": null
   },
@@ -229,8 +229,8 @@
     "repair": "Repaired",
     "price": 150000,
     "location": "Dilijan",
-    "image": "http://localhost:5000/images/townhouse/67.jpg",
-    "image2": "http://localhost:5000/images/townhouse/68.jpg",
+    "image": "/images/townhouse/67.jpg",
+    "image2": "/images/townhouse/68.jpg",
     "image3": null,
     "image4": null
   },
@@ -244,11 +244,11 @@
     "repair": "Repaired",
     "price": 700,
     "location": "Yerevan",
-    "image": "http://localhost:5000/images/townhouse/69.jpg",
-    "image2": "http://localhost:5000/images/townhouse/70.jpg",
-    "image3": "http://localhost:5000/images/townhouse/71.jpg",
-    "image4": "http://localhost:5000/images/townhouse/72.jpg",
-    "image5": "http://localhost:5000/images/townhouse/73.jpg"
+    "image": "/images/townhouse/69.jpg",
+    "image2": "/images/townhouse/70.jpg",
+    "image3": "/images/townhouse/71.jpg",
+    "image4": "/images/townhouse/72.jpg",
+    "image5": "/images/townhouse/73.jpg"
   },
   {
     "id": 27,
@@ -260,8 +260,8 @@
     "repair": "Repaired",
     "price": 150000,
     "location": "Dilijan",
-    "image": "http://localhost:5000/images/townhouse/67.jpg",
-    "image2": "http://localhost:5000/images/townhouse/68.jpg",
+    "image": "/images/townhouse/67.jpg",
+    "image2": "/images/townhouse/68.jpg",
     "image3": null,
     "image4": null
   },
@@ -275,10 +275,10 @@
     "repair": "Designer",
     "price": 130000,
     "location": "Abovyan",
-    "image": "http://localhost:5000/images/townhouse/61.jpg",
-    "image2": "http://localhost:5000/images/townhouse/62.jpg",
-    "image3": "http://localhost:5000/images/townhouse/63.jpg",
-    "image4": "http://localhost:5000/images/townhouse/64.jpg"
+    "image": "/images/townhouse/61.jpg",
+    "image2": "/images/townhouse/62.jpg",
+    "image3": "/images/townhouse/63.jpg",
+    "image4": "/images/townhouse/64.jpg"
   },
   {
     "id": 29,
@@ -290,10 +290,10 @@
     "repair": "Repaired",
     "price": 110000,
     "location": "Yerevan",
-    "image": "http://localhost:5000/images/townhouse/52.jpg",
-    "image2": "http://localhost:5000/images/townhouse/53.jpg",
-    "image3": "http://localhost:5000/images/townhouse/54.jpg",
-    "image4": "http://localhost:5000/images/townhouse/55.jpg"
+    "image": "/images/townhouse/52.jpg",
+    "image2": "/images/townhouse/53.jpg",
+    "image3": "/images/townhouse/54.jpg",
+    "image4": "/images/townhouse/55.jpg"
   },
   {
     "id": 30,
@@ -305,10 +305,10 @@
     "repair": "Partially",
     "price": 90000,
     "location": "Yerevan",
-    "image" : "http://localhost:5000/images/townhouse/56.jpg",
-    "image2": "http://localhost:5000/images/townhouse/57.jpg",
-    "image3": "http://localhost:5000/images/townhouse/58.jpg",
-    "image4": "http://localhost:5000/images/townhouse/59.jpg",
-    "image5": "http://localhost:5000/images/townhouse/60.jpg"
+    "image": "/images/townhouse/56.jpg",
+    "image2": "/images/townhouse/57.jpg",
+    "image3": "/images/townhouse/58.jpg",
+    "image4": "/images/townhouse/59.jpg",
+    "image5": "/images/townhouse/60.jpg"
   }
 ]

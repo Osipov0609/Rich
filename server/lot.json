@@ -7,7 +7,7 @@
         "location": "Ashtarak, Aragatsotn",
         "description": "Fruitful garden, irrigation water available.",
         "features": "water, near the road",
-        "image": "http://localhost:5000/images/lot/74.jpg"
+        "image": "/images/lot/74.jpg"
     },
     {
         "id": 32,
@@ -17,7 +17,7 @@
         "location": "Artashat, Ararat",
         "description": "Ideal for vineyard, fertile soil, includes constant irrigation system.",
         "features": "irrigation, flat terrain, electricity",
-        "image": "http://localhost:5000/images/lot/75.jpg"
+        "image": "/images/lot/75.jpg"
     },
     {
         "id": 33,
@@ -27,7 +27,7 @@
         "location": "Akhuryan, Shirak",
         "description": "Large territory suitable for wheat or potato cultivation.",
         "features": "black soil, easy access",
-        "image": "http://localhost:5000/images/lot/76.jpg"
+        "image": "/images/lot/76.jpg"
     },
     {
         "id": 34,
@@ -37,7 +37,7 @@
         "location": "Karbi, Aragatsotn",
         "description": "Productive cherry orchard with high annual yield and a small storage hut.",
         "features": "fenced, water, fruitful trees",
-        "image": "http://localhost:5000/images/lot/77.jpg"
+        "image": "/images/lot/77.jpg"
     },
     {
         "id": 35,
@@ -47,7 +47,7 @@
         "location": "Dilijan, Tavush",
         "description": "Beautiful mountain view, perfect for livestock or a small eco-farm.",
         "features": "mountain view, drinking water nearby",
-        "image": "http://localhost:5000/images/lot/78.jpg"
+        "image": "/images/lot/78.jpg"
     },
     {
         "id": 36,
@@ -57,6 +57,6 @@
         "location": "Armavir, Armavir",
         "description": "Prepared ground for greenhouse construction, gas and electricity available.",
         "features": "gas, electricity, irrigation",
-        "image": "http://localhost:5000/images/lot/79.jpg"
+        "image": "/images/lot/79.jpg"
     }
 ]

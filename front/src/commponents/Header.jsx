@@ -1,5 +1,5 @@
 import { useNavigate, NavLink } from 'react-router-dom';
-import Logo from '../images/logo/logo.jpg';
+// import Logo from '../../public/images/logo/logo.jpg';
 import { FaRegHeart, FaTimes, FaTrash, FaArrowLeft } from "react-icons/fa";
 import { AiOutlineCreditCard } from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
@@ -84,7 +84,7 @@ export default function Header() {
       <div className="header">
         <div className="box">
           <img 
-            src={Logo} 
+            src={process.env.PUBLIC_URL + '/images/logo/logo.jpg'} 
             alt="Logo" 
             onClick={() => { setShowCardPage(false); navigate('/'); }} 
             style={{ cursor: 'pointer' }} 

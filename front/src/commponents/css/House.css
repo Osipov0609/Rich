@@ -4,131 +4,115 @@
     justify-content: center;
     height: 120vh;
     background: #d8f3dc;
+}
 
+.house .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 50px;
+}
 
-    .box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        gap: 50px;
+.house .navHouse {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 50px;
+}
 
-        .navHouse {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            width: 100%;
-            gap: 50px;
+.house .navHouse select {
+    background: lightblue;
+    font-size: 19px;
+    padding: 7px 11px;
+    border-radius: 10px;
+    color: #006837;
+    transition: all 0.7s;
+    border: 1px solid transparent;
+}
 
-            select {
-                background: lightblue;
-                font-size: 19px;
-                padding: 7px 11px;
-                border-radius: 10px;
-                color: #006837;
-                transition: all 0.7s;
+.house .navHouse select option {
+    color: #006837;
+}
 
-                option {
-                    color: #006837;
-                }
-            }
+.house .navHouse select:hover {
+    box-shadow: 0 0 3px rgb(0, 184, 246), 0 0 3px lightblue, 0 0 3px lightblue;
+}
 
-            select:hover {
-                box-shadow: 0 0 3px rgb(0, 184, 246), 0 0 3px lightblue, 0 0 3px lightblue;
+.house .results {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+}
 
-            }
+.house .house-card {
+    height: 820px;
+    border: 1px solid #000;
+    border-radius: 12px;
+    background: rgb(206, 243, 255);
+    overflow: hidden;
+    box-shadow: 0 4px 10px green;
+    position: relative;
+}
 
+.house .fafaHeart {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    z-index: 987 !important;
+    color: azure;
+    cursor: pointer;
+}
 
+.house .card-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    flex-direction: column;
+    font-size: 21px;
+    color: #006837;
+    position: relative;
+    padding: 15px;
+}
 
+.house .specs {
+    position: relative;
+    width: 100%;
+}
 
+.house .specs .fafaShopping {
+    font-size: 24px;
+    position: absolute;
+    right: 2%;
+    bottom: 3%;
+    cursor: pointer;
+}
 
-        }
+.house .mySwiper {
+    width: 100%;
+    height: 600px;
+}
 
-        .results {
-            width: 100%;
-            height: 100vh;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-            gap: 20px;
+.house .mySwiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.house .swiper-button-next,
+.house .swiper-button-prev {
+    color: #fff !important;
+    background: rgba(0, 0, 0, 0.3);
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50%;
+}
 
-        }
-
-        .house-card {
-            height: 820px;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            border: 1px solid #000;
-            background: #fff;
-            overflow: hidden;
-            box-shadow: 0 4px 10px green;
-            background: rgb(206, 243, 255);
-            position: relative;
-
-            .fafaHeart {
-                position: absolute;
-                top: 2%;
-                right: 2%;
-                z-index: 987 !important;
-                color: azure;
-            }
-
-            .card-info {
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-start;
-                gap: 15px;
-                flex-direction: column;
-                font-size: 21px;
-                color: #006837;
-                position: relative;
-
-                .specs {
-                    .fafaShopping {
-                        font-size: 24px;
-                        position: absolute;
-                        right: 2%;
-                        bottom: 3%;
-                    }
-                }
-
-
-            }
-        }
-
-
-        .mySwiper {
-            width: 100%;
-            height: 600px;
-
-        }
-
-        .mySwiper img {
-            width: 100%;
-            height: 100%;
- 
-            background-size: cover;
- 
-        }
-
-        .card-info {
-            padding: 15px;
-        }
-
- 
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: #fff !important;
-            background: rgba(0, 0, 0, 0.3);
-            width: 35px !important;
-            height: 35px !important;
-            border-radius: 50%;
-
-            after {
-                font-size: 15px !important;
-            }
-        }
-    }
-
-
+.house .swiper-button-next::after,
+.house .swiper-button-prev::after {
+    font-size: 15px !important;
 }

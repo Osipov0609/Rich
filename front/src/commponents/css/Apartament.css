@@ -2,130 +2,123 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120vh;
+    min-height: 120vh;
     background: #d8f3dc;
+    padding: 20px 0;
+}
 
+.apartament .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px;
+    gap: 50px;
+}
 
-    .box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        gap: 50px;
+.apartament .navApartament {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-        .navApartament {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            width: 100%;
-            gap: 50px;
+.apartament .navApartament select {
+    background: lightblue;
+    font-size: 19px;
+    padding: 7px 11px;
+    border-radius: 10px;
+    color: #006837;
+    border: 1px solid transparent;
+    transition: all 0.7s;
+    cursor: pointer;
+}
 
-            select {
-                background: lightblue;
-                font-size: 19px;
-                padding: 7px 11px;
-                border-radius: 10px;
-                color: #006837;
-                transition: all 0.7s;
+.apartament .navApartament select option {
+    color: #006837;
+}
 
-                option {
-                    color: #006837;
-                }
-            }
+.apartament .navApartament select:hover {
+    box-shadow: 0 0 3px rgb(0, 184, 246), 0 0 3px lightblue, 0 0 3px lightblue;
+}
 
-            select:hover {
-                box-shadow: 0 0 3px rgb(0, 184, 246), 0 0 3px lightblue, 0 0 3px lightblue;
+.apartament .results {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
+    gap: 20px;
+}
 
-            }
+.apartament .apartament-card {
+    min-height: 600px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: rgb(206, 243, 255);
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.3);
+    position: relative;
+}
 
+.apartament .fafaHeart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 99 !important;
+    font-size: 21px;
+    color: white;
+    cursor: pointer;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+}
 
+.apartament .card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    font-size: 18px;
+    color: #006837;
+    padding: 15px;
+}
 
+.apartament .specs {
+    width: 100%;
+    position: relative;
+}
 
+.apartament .specs .fafaShopping {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
 
-        }
+.apartament .mySwiper {
+    width: 100%;
+    height: 600px;
+}
 
-        .results {
-            width: 100%;
-            height: 100vh;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-            gap: 20px;
+.apartament .mySwiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-        }
+/* Swiper Buttons Navigation */
+.apartament .swiper-button-next,
+.apartament .swiper-button-prev {
+    color: #fff !important;
+    background: rgba(0, 0, 0, 0.3);
+    width: 35px !important;
+    height: 35px !important;
+    border-radius: 50%;
+}
 
-        .apartament-card {
-            height: 820px;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            background: #fff;
-            overflow: hidden;
-            box-shadow: 0 4px 10px green;
-            background: rgb(206, 243, 255);
-            position: relative;
-
-            .fafaHeart {
-                position: absolute;
-                top: 2%;
-                right: 2%;
-                z-index: 99 !important;
-                font-size: 21px;
-                color: white;
-            }
-
-            .card-info {
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-start;
-                gap: 15px;
-                flex-direction: column;
-                font-size: 21px;
-                color: #006837;
-
-                .specs {
-                    .fafaShopping {
-                        font-size: 24px;
-                        position: absolute;
-                        right: 2.5%;
-                    }
-                }
-
-            }
-        }
-
-
-        .mySwiper {
-            width: 100%;
-            height: 600px;
-
-        }
-
-        .mySwiper img {
-            width: 100%;
-            height: 100%;
-
-            background-size: cover;
-
-        }
-
-        .card-info {
-            padding: 15px;
-        }
-
-
-        .swiper-button-next,
-        .swiper-button-prev {
-            color: #fff !important;
-            background: rgba(0, 0, 0, 0.3);
-            width: 35px !important;
-            height: 35px !important;
-            border-radius: 50%;
-
-            after {
-                font-size: 15px !important;
-            }
-        }
-    }
-
-
+.apartament .swiper-button-next::after,
+.apartament .swiper-button-prev::after {
+    font-size: 15px !important;
 }

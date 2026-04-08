@@ -6,13 +6,12 @@ export default function Realtor() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
- 
+
         const fetchData = fetch('http://localhost:5000/realtor')
             .then(response => response.json());
 
- 
         const timer = new Promise(resolve => setTimeout(resolve, 2000));
- 
+
         Promise.all([fetchData, timer])
             .then(([data]) => {
                 setReal(data);
@@ -34,17 +33,20 @@ export default function Realtor() {
 
     return (
         <div className='realtor'>
-            <h2 style={{textAlign: 'center'}}>My Team</h2>
+            <h2 style={{ textAlign: 'center' }}>My Team</h2>
             <div className="box">
                 {real.map((elem) => (
                     <div key={elem.id} className="real_result">
+
                         <img src={elem.image} alt={elem.name} />
-                        <p><strong>Name:</strong> {elem.name}</p>
-                        <p><strong>Position:</strong> {elem.position}</p>
-                        <p><strong>Specialization:</strong> {elem.specialization}</p>
-                        <p><strong>Experience:</strong> {elem.experience}</p>
-                        <p><strong>Phone:</strong> {elem.phone}</p>
-                        <p><strong>Email:</strong> {elem.email}</p>
+                        <div style={{ padding: '10px' }}>
+                            <p><strong>Name:</strong> {elem.name}</p>
+                            <p><strong>Position:</strong> {elem.position}</p>
+                            <p><strong>Specialization:</strong> {elem.specialization}</p>
+                            <p><strong>Experience:</strong> {elem.experience}</p>
+                            <p><strong>Phone:</strong> {elem.phone}</p>
+                            <p><strong>Email:</strong> {elem.email}</p>
+                        </div>
                     </div>
                 ))}
             </div>
