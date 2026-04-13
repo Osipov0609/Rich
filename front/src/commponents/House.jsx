@@ -121,13 +121,14 @@ export default function Home() {
                 <div className="results">
                     {data.map((item) => {
                         // Ստուգում ենք նկարները և ավելացնում API_URL-ը, եթե հասցեն սկսվում է /images-ով
+                        // ՍՏՈՒԳՈՒՄ ԵՆՔ ՆԿԱՐՆԵՐԸ
                         const houseImages = [
                             item.image, item.image2, item.image3,
                             item.image4, item.image5, item.image6
-                        ].filter(Boolean).map(img => img.startsWith('http') ? img : `${API_URL}${img}`);
-
-                        const isLiked = like[item.id];
-                        const isInCart = cart[item.id];
+                        ].filter(Boolean).map(img => {
+                            if (img.startsWith('http')) return img;
+                            return img.startsWith('/') ? img : `/${img}`;
+                        });
 
                         return (
                             <div key={item.id} className='house-card'>

@@ -5,11 +5,9 @@ export default function Realtor() {
     const [real, setReal] = useState([])
     const [loading, setLoading] = useState(true)
 
-    // Քո Render սերվերի հասցեն
     const API_URL = "https://rich-2-7dn1.onrender.com";
 
     useEffect(() => {
-        // Օգտագործում ենք API_URL-ը
         const fetchData = fetch(`${API_URL}/realtor`)
             .then(response => response.json());
 
@@ -39,10 +37,9 @@ export default function Realtor() {
             <h2 style={{ textAlign: 'center' }}>My Team</h2>
             <div className="box">
                 {real.map((elem) => {
-                    // Նկարի հասցեի ստուգում և կառուցում
                     const imageUrl = elem.image?.startsWith('http') 
                         ? elem.image 
-                        : `${API_URL}${elem.image}`;
+                        : (elem.image?.startsWith('/') ? elem.image : `/${elem.image}`);
 
                     return (
                         <div key={elem.id} className="real_result">

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import './css/Contact.css';
-// import Logo2 from '../images/logo/logo2.jpg';
+
 
 export default function Contact() {
 
