@@ -55,7 +55,6 @@ export default function Home() {
             if (type) params.append('type', type);
             if (propertyType) params.append('propertyType', propertyType);
 
-            // Օգտագործում ենք API_URL փոփոխականը
             const res = await fetch(`${API_URL}/houses?${params.toString()}`);
             const result = await res.json();
             setData(result);
@@ -72,7 +71,6 @@ export default function Home() {
         <div className="house">
             <div className="box">
                 <nav className="navHouse">
-                    {/* Rooms */}
                     <select value={bedroom} onChange={(e) => setBedroom(e.target.value)}>
                         <option value="">Rooms (All)</option>
                         <option value="One">One</option>
@@ -81,28 +79,24 @@ export default function Home() {
                         <option value="Four">Four</option>
                     </select>
 
-                    {/* Type */}
                     <select value={type} onChange={(e) => setType(e.target.value)}>
                         <option value="">Type (All)</option>
                         <option value="sale">Sale</option>
                         <option value="rent">Rent</option>
                     </select>
 
-                    {/* Building - Սա բացակայում էր */}
                     <select value={building} onChange={(e) => setBuilding(e.target.value)}>
                         <option value="">Building (All)</option>
                         <option value="yes">Yes</option>
                         <option value="no">No</option>
                     </select>
 
-                    {/* Furnishing - Սա բացակայում էր */}
                     <select value={furnishing} onChange={(e) => setFurnishing(e.target.value)}>
                         <option value="">Furnishing (All)</option>
                         <option value="furnished">Furnished</option>
                         <option value="unfurnished">Unfurnished</option>
                     </select>
 
-                    {/* Repair */}
                     <select value={repair} onChange={(e) => setRepair(e.target.value)}>
                         <option value="">Repair (All)</option>
                         <option value="Repaired">Repaired</option>
@@ -110,7 +104,6 @@ export default function Home() {
                         <option value="Old">Old</option>
                     </select>
 
-                    {/* Property Type */}
                     <select value={propertyType} onChange={(e) => setPropertyType(e.target.value)}>
                         <option value="">Property Type (All)</option>
                         <option value="house">House</option>
@@ -120,18 +113,18 @@ export default function Home() {
 
                 <div className="results">
                     {data.map((item) => {
-                        // 1. Սահմանում ենք այս երկու փոփոխականները, որոնք build-ի ժամանակ սխալ էին տալիս
+                        // Ուղղված build-ի սխալները
                         const isLiked = !!like[item.id];
                         const isInCart = !!cart[item.id];
 
-                        // ՍՏՈՒԳՈՒՄ ԵՆՔ ՆԿԱՐՆԵՐԸ
+                        // Ուղղված նկարների հասցեները
                         const houseImages = [
                             item.image, item.image2, item.image3,
                             item.image4, item.image5, item.image6
                         ].filter(Boolean).map(img => {
                             if (img.startsWith('http')) return img;
-                            // Ավելացնում ենք API_URL-ը, եթե նկարը սերվերից է գալիս
-                            return img.startsWith('/') ? `${API_URL}${img}` : `${API_URL}/${img}`;
+                            const cleanImgPath = img.startsWith('/') ? img.slice(1) : img;
+                            return `${API_URL}/${cleanImgPath}`;
                         });
 
                         return (
@@ -143,7 +136,6 @@ export default function Home() {
                                         <FaRegHeart className='fafaHeart' style={{ color: 'white', fontSize: '22px' }} />
                                     )}
                                 </div>
-                                {/* Մնացած կոդը նույնն է... */}
 
                                 <Swiper
                                     modules={[Navigation, Pagination]}
