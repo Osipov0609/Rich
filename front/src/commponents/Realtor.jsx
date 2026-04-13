@@ -6,7 +6,7 @@ export default function Realtor() {
     const [loading, setLoading] = useState(true)
 
     // Քո Render սերվերի հասցեն
-    const API_URL = "https://rich-house-front.onrender.com";
+    const API_URL = "https://rich-2-7dn1.onrender.com";
 
     useEffect(() => {
         // Օգտագործում ենք API_URL-ը

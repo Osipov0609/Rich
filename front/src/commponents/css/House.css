@@ -116,3 +116,100 @@
 .house .swiper-button-prev::after {
     font-size: 15px !important;
 }
+/* 1024px */
+@media (max-width: 1024px) {
+    .house {
+        height: auto;
+        padding: 20px;
+    }
+
+    .house .box {
+        height: auto;
+        gap: 35px;
+    }
+
+    .house .results {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        height: auto;
+    }
+
+    .house .house-card {
+        height: auto;
+    }
+
+    .house .mySwiper {
+        height: 450px;
+    }
+
+    .house .card-info {
+        font-size: 18px;
+    }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+    .house .navHouse {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .house .navHouse select {
+        font-size: 17px;
+    }
+
+    .house .results {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .house .mySwiper {
+        height: 320px;
+    }
+
+    .house .card-info {
+        font-size: 17px;
+    }
+}
+
+/* 480px */
+@media (max-width: 480px) {
+    .house {
+        padding: 15px;
+    }
+
+    .house .box {
+        gap: 25px;
+    }
+
+    .house .navHouse {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .house .navHouse select {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .house .results {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .house .mySwiper {
+        height: 250px;
+    }
+
+    .house .card-info {
+        font-size: 16px;
+    }
+
+    .house .fafaHeart {
+        font-size: 20px;
+    }
+
+    .house .specs .fafaShopping {
+        font-size: 20px;
+    }
+}

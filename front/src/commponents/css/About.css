@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-block: 50px;
+    padding: 50px 15px;
 }
 
 .about .box {
@@ -10,7 +10,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
 }
 
 .about .box .textOne,
@@ -18,6 +18,8 @@
 .about .box .textTree,
 .about .box .textFor {
     font-size: 25px;
+    line-height: 1.6;
+    width: 100%;
 }
 
 .about .box .textOne,
@@ -28,4 +30,48 @@
 
 .about .box .textTwo {
     text-align: start;
+}
+
+@media (max-width: 1024px) {
+    .about .box {
+        gap: 30px;
+    }
+
+    .about .box .textOne,
+    .about .box .textTwo,
+    .about .box .textTree,
+    .about .box .textFor {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 40px 10px;
+    }
+
+    .about .box {
+        gap: 25px;
+    }
+
+    .about .box .textOne,
+    .about .box .textTwo,
+    .about .box .textTree,
+    .about .box .textFor {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .about .box {
+        gap: 20px;
+    }
+
+    .about .box .textOne,
+    .about .box .textTwo,
+    .about .box .textTree,
+    .about .box .textFor {
+        font-size: 18px;
+    }
 }

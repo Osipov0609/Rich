@@ -8,7 +8,7 @@
     "repair": "Repaired",
     "price": 50000,
     "location": "Yerevan",
-    "image": "/images/apartament/1.jpg",
+    "image": "public/images/apartament/1.jpg",
     "image2": "/images/apartament/2.jpg",
     "image3": "/images/apartament/3.jpg",
     "image4": null
@@ -134,7 +134,7 @@
     "repair": "Repaired",
     "price": 100,
     "location": "Yerevan",
-    "image": "/images/apartament/13.jpg",
+    "image": "public/images/apartament/13.jpg",
     "image2": "/images/apartament/14.jpg",
     "image3": null,
     "image4": null

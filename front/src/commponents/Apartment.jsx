@@ -18,8 +18,8 @@ export default function Apartament() {
     const [repair, setRepair] = useState("");
     const [type, setType] = useState("");
 
-    // Փոխարինիր սա քո Render-ի իրական հասցեով (առանց վերջին /-ի)
-    const API_URL = "https://rich-2-7dn1.onrender.com"; 
+    // Backend-ի հասցեն
+    const API_URL = "https://rich-2-7dn1.onrender.com";
 
     const [likes, setLikes] = useState(() => {
         const saved = localStorage.getItem('likedApartments');
@@ -53,7 +53,6 @@ export default function Apartament() {
             if (repair) params.append('repair', repair);
             if (type) params.append('type', type);
 
-            // Այստեղ fetch-ը կկատարվի production սերվերին
             const res = await fetch(`${API_URL}/apartments?${params.toString()}`);
             const result = await res.json();
             setData(result);
@@ -106,10 +105,17 @@ export default function Apartament() {
 
                 <div className="results">
                     {data.map((item) => {
-                        // Նկարների հասցեների կառուցումը
                         const apartmentImages = [
                             item.image, item.image2, item.image3, item.image4
-                        ].filter(Boolean).map(img => img.startsWith('http') ? img : `${API_URL}${img}`);
+                        ].filter(Boolean).map(img => {
+                            // 1. Եթե հասցեն արդեն ամբողջական է (https://...), թողնում ենք նույնը
+                            if (img.startsWith('https')) return img;
+
+                            // 2. Քանի որ նկարները FRONTEND-ի public թղթապանակում են,
+                            // մենք ՉՊԵՏՔ Է ավելացնենք API_URL (Backend-ի հասցեն)։
+                            // Պարզապես համոզվում ենք, որ հասցեն սկսվում է թեք գծով /
+                            return img.startsWith('/') ? img : `${img}`;
+                        });
 
                         const isLiked = likes[item.id];
                         const isInCart = cart[item.id];

@@ -3,21 +3,23 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 15px;
 }
 
 .card-box {
   background: lightblue;
-  padding: 30px;
+  padding: 25px;
   border-radius: 12px;
   width: 100%;
   max-width: 400px;
-  box-shadow: 0 0 15px #006837,0 0 15px #006837,0 0 15px #006837;
+  box-shadow: 0 0 15px #006837, 0 0 15px #006837, 0 0 15px #006837;
 }
 
 .card-box h3 {
   margin-bottom: 20px;
   color: #006837;
   text-align: center;
+  font-size: 22px;
 }
 
 .input-group {
@@ -27,7 +29,7 @@
 }
 
 .input-group label {
-  font-size: 11px; 
+  font-size: 11px;
   color: #006837;
   margin-bottom: 5px;
   text-transform: uppercase;
@@ -41,8 +43,8 @@
   font-size: 16px;
   outline: none;
   transition: border 0.3s;
-  width: 100%; 
-  box-sizing: border-box; 
+  width: 100%;
+  box-sizing: border-box;
   color: #006837;
 }
 
@@ -50,24 +52,21 @@
   border-color: #006837;
 }
 
-
 .card-row {
-  display: flex; 
-  gap: 20px;
-  justify-content: flex-start;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .card-row .input-group {
-  width: 100px; 
-}
-
-.card-row .input-group:last-child {
-  width: 85px;
+  flex: 1;
+  min-width: 90px;
 }
 
 .send-btn {
   width: 100%;
-  padding: 15px;
+  padding: 14px;
   background-color: #006837;
   color: white;
   border: none;
@@ -86,4 +85,57 @@
 
 .send-btn:hover:not(:disabled) {
   opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .card-box {
+    padding: 20px;
+  }
+
+  .card-box h3 {
+    font-size: 20px;
+  }
+
+  .input-group input {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .send-btn {
+    padding: 13px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-box {
+    padding: 18px;
+  }
+
+  .card-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-row .input-group {
+    width: 100%;
+  }
+
+  .card-box h3 {
+    font-size: 18px;
+  }
+
+  .input-group label {
+    font-size: 10px;
+  }
+
+  .input-group input {
+    font-size: 14px;
+    padding: 9px;
+  }
+
+  .send-btn {
+    font-size: 14px;
+    padding: 12px;
+  }
 }
