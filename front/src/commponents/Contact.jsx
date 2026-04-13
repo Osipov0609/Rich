@@ -9,7 +9,7 @@ export default function Contact() {
     email: '',
     message: ''
   });
-  
+
   const [status, setStatus] = useState('');
   const [isLoading, setIsLoading] = useState(false); // Boolean state բեռնման համար
 
@@ -31,9 +31,10 @@ export default function Contact() {
       `;
 
       // Փոխիր այս URL-ը քո իրական backend-ի հասցեով, երբ տեղադրես սերվերի վրա
-      const response = await axios.post('http://localhost:5000/li', {
+      // Փոխարինիր սա
+      const response = await axios.post('https://rich-2-7dn1.onrender.com/li', {
         message: fullText
-      });
+      });;
 
       if (response.status === 200) {
         setStatus('Հաջողությամբ ուղարկվեց։');
@@ -52,7 +53,7 @@ export default function Contact() {
       <h4>Contact us to stay connected with our team...</h4>
       <div className="box">
         <img src={process.env.PUBLIC_URL + '/images/logo/logo2.jpg'} alt="Logo2" />
-        
+
         <form className="contact_info" onSubmit={handleSubmit}>
           <input
             type="text"
@@ -77,7 +78,7 @@ export default function Contact() {
             onChange={handleChange}
             required
           />
-          
+
           {/* Եթե ֆայլի բեռնում դեռ չես իրականացրել backend-ում, այս դաշտը պարզապես դիզայնի համար է */}
           <input type="file" className='fileCv' />
 
@@ -89,9 +90,9 @@ export default function Contact() {
             required
           ></textarea>
 
-          <button 
-            type="submit" 
-            className="sendBtn" 
+          <button
+            type="submit"
+            className="sendBtn"
             disabled={isLoading} // Կոճակը դառնում է անակտիվ ուղարկելիս
           >
             {isLoading ? 'Sending...' : 'Send'}
