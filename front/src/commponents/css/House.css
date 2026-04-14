@@ -13,6 +13,8 @@
     align-items: center;
     justify-content: center;
     gap: 40px;
+    width: 100%;
+    max-width: 1500px;
 }
 
 .house .navHouse {
@@ -32,6 +34,7 @@
     color: #006837;
     transition: 0.3s;
     border: 1px solid transparent;
+    min-width: 180px;
 }
 
 .house .navHouse select:hover {
@@ -41,7 +44,7 @@
 .house .results {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 20px;
 }
 
@@ -52,6 +55,7 @@
     overflow: hidden;
     box-shadow: 0 4px 10px green;
     position: relative;
+    width: 100%;
 }
 
 .house .fafaHeart {
@@ -61,6 +65,7 @@
     z-index: 10;
     color: white;
     cursor: pointer;
+    font-size: 22px;
 }
 
 .house .card-info {
@@ -110,9 +115,18 @@
     font-size: 14px !important;
 }
 
+/* 1024px */
 @media (max-width: 1024px) {
+    .house {
+        padding: 18px;
+    }
+
+    .house .box {
+        gap: 30px;
+    }
+
     .house .results {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     .house .mySwiper {
@@ -122,19 +136,30 @@
     .house .card-info {
         font-size: 17px;
     }
-}
 
-@media (max-width: 768px) {
     .house .navHouse {
         gap: 20px;
+    }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+    .house {
+        padding: 15px;
+    }
+
+    .house .navHouse {
+        gap: 15px;
+        justify-content: center;
     }
 
     .house .navHouse select {
         font-size: 16px;
+        min-width: 160px;
     }
 
     .house .results {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 
     .house .mySwiper {
@@ -143,9 +168,11 @@
 
     .house .card-info {
         font-size: 16px;
+        padding: 12px;
     }
 }
 
+/* 425px */
 @media (max-width: 425px) {
     .house {
         padding: 10px;
@@ -163,21 +190,22 @@
 
     .house .navHouse select {
         width: 100%;
+        min-width: 100%;
         font-size: 15px;
     }
 
     .house .results {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 15px;
     }
 
     .house .mySwiper {
-        height: 220px;
+        height: 240px;
     }
 
     .house .card-info {
         font-size: 15px;
+        padding: 10px;
     }
 
     .house .fafaHeart {
@@ -186,5 +214,38 @@
 
     .house .specs .fafaShopping {
         font-size: 18px;
+    }
+}
+
+/* 375px */
+@media (max-width: 375px) {
+    .house {
+        padding: 8px;
+    }
+
+    .house .mySwiper {
+        height: 200px;
+    }
+
+    .house .card-info {
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .house .navHouse select {
+        font-size: 14px;
+        padding: 7px 10px;
+    }
+
+    .house .fafaHeart {
+        top: 8px;
+        right: 8px;
+        font-size: 16px;
+    }
+
+    .house .specs .fafaShopping {
+        font-size: 16px;
+        right: 8px;
+        bottom: 8px;
     }
 }
