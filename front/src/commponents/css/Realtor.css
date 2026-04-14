@@ -3,42 +3,46 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
+    padding: 20px;
 }
 
 .realtor h2 {
-    font-size: 45px;
+    font-size: 42px;
     color: #1b4332;
     text-shadow: 2px 2px 8px rgba(45, 106, 79, 0.8);
+    text-align: center;
 }
 
 .realtor .box {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: stretch;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
 }
 
 .realtor .box .real_result {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 15px;
+    gap: 12px;
     border: 1px solid lightblue;
-    box-shadow: 0 0 15px lightblue, 0 0 15px lightblue, 0 0 15px lightblue;
+    box-shadow: 0 0 12px lightblue;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 600px;
+    width: 100%;
 }
 
 .realtor .box .real_result img {
-    width: 650px;
-    height: 400px;
-    object-fit: cover;
+    width: 100%;
+    height: 380px;
+    background-size: 100% 100%;
 }
 
 .realtor .box .real_result p {
-    padding-left: 7px;
-    font-size: 21px;
+    padding: 0 10px 10px;
+    font-size: 20px;
     color: #2d6a4f;
 }
 
@@ -46,32 +50,55 @@
     color: #1b4332;
 }
 
-@media (max-width: 700px) {
-    .realtor .box .real_result img {
-        width: 100%;
-        height: auto;
-    }
-    
+@media (max-width: 1024px) {
     .realtor h2 {
-        font-size: 32px;
-        text-align: center;
+        font-size: 34px;
+    }
+
+    .realtor .box .real_result img {
+        height: 320px;
+    }
+
+    .realtor .box .real_result p {
+        font-size: 18px;
     }
 }
-@media (max-width: 480px) {
+
+@media (max-width: 768px) {
     .realtor {
-        gap: 25px;
+        gap: 30px;
+    }
+
+    .realtor h2 {
+        font-size: 28px;
+    }
+
+    .realtor .box {
+        gap: 20px;
+    }
+
+    .realtor .box .real_result img {
+        height: 260px;
+    }
+
+    .realtor .box .real_result p {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 425px) {
+    .realtor {
+        gap: 20px;
         padding: 10px;
     }
 
     .realtor h2 {
-        font-size: 26px;
-        text-align: center;
+        font-size: 24px;
     }
 
     .realtor .box {
         flex-direction: column;
         align-items: center;
-        gap: 20px;
     }
 
     .realtor .box .real_result {
@@ -79,11 +106,10 @@
     }
 
     .realtor .box .real_result img {
-        width: 100%;
         height: 220px;
     }
 
     .realtor .box .real_result p {
-        font-size: 16px;
+        font-size: 15px;
     }
 }

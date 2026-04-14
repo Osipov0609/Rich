@@ -16,61 +16,78 @@ export default function Header() {
 
   const API_URL = "https://rich-2-7dn1.onrender.com";
 
-  const loadItems = useCallback(async (apKey, houseKey, setter) => {
+  const loadItems = useCallback(async (apKey, houseKey, lotKey, setter) => {
     try {
       const savedAp = JSON.parse(localStorage.getItem(apKey) || '{}');
       const savedHouse = JSON.parse(localStorage.getItem(houseKey) || '{}');
+      const savedLot = JSON.parse(localStorage.getItem(lotKey) || '{}');
 
       const apIds = Object.keys(savedAp).filter(id => savedAp[id]);
       const houseIds = Object.keys(savedHouse).filter(id => savedHouse[id]);
+      const lotIds = Object.keys(savedLot).filter(id => savedLot[id]);
 
-      if (apIds.length === 0 && houseIds.length === 0) {
+      if (apIds.length === 0 && houseIds.length === 0 && lotIds.length === 0) {
         setter([]);
         return;
       }
 
-      const [resAp, resHouse] = await Promise.all([
+      const [resAp, resHouse, resLot] = await Promise.all([
         fetch(`${API_URL}/apartments`),
-        fetch(`${API_URL}/houses`)
+        fetch(`${API_URL}/houses`),
+        fetch(`${API_URL}/lot`)
       ]);
 
       const allAp = await resAp.json();
       const allHouse = await resHouse.json();
+      const allLot = await resLot.json();
 
       const filteredAp = allAp.filter(item => apIds.includes(item.id.toString()));
       const filteredHouse = allHouse.filter(item => houseIds.includes(item.id.toString()));
+      const filteredLot = allLot.filter(item => lotIds.includes(item.id.toString()));
 
-      setter([...filteredAp, ...filteredHouse]);
+      // Միավորում ենք բոլորը մեկ զանգվածում
+      setter([...filteredAp, ...filteredHouse, ...filteredLot]);
     } catch (error) {
       console.error("Error loading items:", error);
     }
   }, [API_URL]);
 
   useEffect(() => {
-    loadItems('likedApartments', 'likedHouses', setFavoriteItems);
-    loadItems('cartItems', 'cartHouses', setCartItems);
+    // Ավելացվել են 'likeLot' և 'cartLot' բանալիները
+    loadItems('likedApartments', 'likedHouses', 'likeLot', setFavoriteItems);
+    loadItems('cartItems', 'cartHouses', 'cartLot', setCartItems);
 
     const handleSync = () => {
-      loadItems('likedApartments', 'likedHouses', setFavoriteItems);
-      loadItems('cartItems', 'cartHouses', setCartItems);
+      loadItems('likedApartments', 'likedHouses', 'likeLot', setFavoriteItems);
+      loadItems('cartItems', 'cartHouses', 'cartLot', setCartItems);
     };
 
     window.addEventListener('storage', handleSync);
     return () => window.removeEventListener('storage', handleSync);
   }, [loadItems]);
 
-  const removeItem = (id, apKey, houseKey, setter) => {
+  const removeItem = (id, apKey, houseKey, lotKey, setter) => {
     const savedAp = JSON.parse(localStorage.getItem(apKey) || '{}');
     const savedHouse = JSON.parse(localStorage.getItem(houseKey) || '{}');
+    const savedLot = JSON.parse(localStorage.getItem(lotKey) || '{}');
+
     if (savedAp[id]) savedAp[id] = false;
     if (savedHouse[id]) savedHouse[id] = false;
+    if (savedLot[id]) savedLot[id] = false;
+
     localStorage.setItem(apKey, JSON.stringify(savedAp));
     localStorage.setItem(houseKey, JSON.stringify(savedHouse));
-    loadItems(apKey, houseKey, setter);
+    localStorage.setItem(lotKey, JSON.stringify(savedLot));
+
+    loadItems(apKey, houseKey, lotKey, setter);
     window.dispatchEvent(new Event('storage'));
   };
 
-  const totalPrice = cartItems.reduce((sum, item) => sum + Number(item.price), 0);
+  const totalPrice = cartItems.reduce((sum, item) => {
+    // Lot-ի դեպքում price-ի փոխարեն price_usd է
+    const itemPrice = item.price || item.price_usd || 0;
+    return sum + Number(itemPrice);
+  }, 0);
   
   const getImageUrl = (img) => {
     if (!img) return "";
@@ -148,9 +165,9 @@ export default function Header() {
                 <img src={getImageUrl(item.image)} alt="" className="fav-img" />
                 <div className="fav-info">
                   <h4>{item.location}</h4>
-                  <p>{item.price}$</p>
+                  <p>{item.price || item.price_usd}$</p>
                 </div>
-                <FaTrash className="delete-fav" onClick={() => removeItem(item.id, 'likedApartments', 'likedHouses', setFavoriteItems)} />
+                <FaTrash className="delete-fav" onClick={() => removeItem(item.id, 'likedApartments', 'likedHouses', 'likeLot', setFavoriteItems)} />
               </div>
             ))}
           </div>
@@ -167,9 +184,9 @@ export default function Header() {
                 <img src={getImageUrl(item.image)} alt="" className="fav-img" />
                 <div className="fav-info">
                   <h4>{item.location}</h4>
-                  <p>{item.price}$</p>
+                  <p>{item.price || item.price_usd}$</p>
                 </div>
-                <FaTrash className="delete-fav" onClick={() => removeItem(item.id, 'cartItems', 'cartHouses', setCartItems)} />
+                <FaTrash className="delete-fav" onClick={() => removeItem(item.id, 'cartItems', 'cartHouses', 'cartLot', setCartItems)} />
               </div>
             ))}
             {cartItems.length > 0 && (

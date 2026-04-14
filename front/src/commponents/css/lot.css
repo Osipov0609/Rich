@@ -2,55 +2,119 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 20px; 
+    padding: 20px;
 }
 
 .lot .box {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: stretch;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 25px;
     width: 100%;
-    max-width: 1400px; 
+    max-width: 1400px;
 }
 
 .lot .box .lot_result {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 15px;
+    gap: 12px;
     border: 1px solid lightblue;
-    box-shadow: 0 0 15px lightblue, 0 0 5px lightblue, 0 0 5px lightblue;
-    background-color: #fff; 
+    box-shadow: 0 0 12px lightblue;
+    background-color: #fff;
     overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    max-width: 620px;
+    width: 100%;
+}
+
+.lot .box .lot_result .like-icon-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+    z-index: 10;
+    cursor: pointer;
 }
 
 .lot .box .lot_result img {
-    width: 650px;
-    height: 600px;
+    width: 100%;
+    height: 500px;
     object-fit: cover;
 }
 
 .lot .box .lot_result p {
-    padding-left: 7px;
-    font-size: 21px;
+    padding: 0 10px 10px;
+    font-size: 20px;
     color: #2d6a4f;
-    margin: 5px 0; 
+    margin: 0;
 }
 
 .lot .box .lot_result strong {
     color: #1b4332;
 }
 
-@media (max-width: 700px) {
+.lot .box .lot_result .fafaShopping {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
     .lot .box .lot_result img {
-        width: 100%;
-        height: auto;
+        height: 380px;
     }
+
+    .lot .box .lot_result p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .lot .box {
+        gap: 20px;
+    }
+
+    .lot .box .lot_result img {
+        height: 280px;
+    }
+
+    .lot .box .lot_result p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 425px) {
+    .lot {
+        padding: 10px;
+    }
+
+    .lot .box {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
     .lot .box .lot_result {
         width: 100%;
+    }
+
+    .lot .box .lot_result img {
+        height: 220px;
+    }
+
+    .lot .box .lot_result p {
+        font-size: 15px;
+    }
+
+    .lot .box .lot_result .like-icon-container {
+        font-size: 18px;
+    }
+
+    .lot .box .lot_result .fafaShopping {
+        font-size: 18px;
     }
 }

@@ -2,8 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120vh;
+    min-height: 100vh;
     background: #d8f3dc;
+    padding: 20px;
 }
 
 .house .box {
@@ -11,46 +12,40 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    gap: 50px;
+    gap: 40px;
 }
 
 .house .navHouse {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* width: 100%; */
-    gap: 50px;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .house .navHouse select {
     background: lightblue;
-    font-size: 19px;
-    padding: 7px 11px;
+    font-size: 18px;
+    padding: 8px 12px;
     border-radius: 10px;
     color: #006837;
-    transition: all 0.7s;
+    transition: 0.3s;
     border: 1px solid transparent;
 }
 
-.house .navHouse select option {
-    color: #006837;
-}
-
 .house .navHouse select:hover {
-    box-shadow: 0 0 3px rgb(0, 184, 246), 0 0 3px lightblue, 0 0 3px lightblue;
+    box-shadow: 0 0 5px rgb(0, 184, 246);
 }
 
 .house .results {
     width: 100%;
-    height: 100vh;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
     gap: 20px;
 }
 
 .house .house-card {
-    height: 820px;
     border: 1px solid #000;
     border-radius: 12px;
     background: rgb(206, 243, 255);
@@ -61,22 +56,19 @@
 
 .house .fafaHeart {
     position: absolute;
-    top: 2%;
-    right: 2%;
-    z-index: 987 !important;
-    color: azure;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    color: white;
     cursor: pointer;
 }
 
 .house .card-info {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 15px;
     flex-direction: column;
-    font-size: 21px;
+    gap: 10px;
+    font-size: 18px;
     color: #006837;
-    position: relative;
     padding: 15px;
 }
 
@@ -86,23 +78,24 @@
 }
 
 .house .specs .fafaShopping {
-    font-size: 24px;
+    font-size: 22px;
     position: absolute;
-    right: 2%;
-    bottom: 3%;
+    right: 10px;
+    bottom: 10px;
     cursor: pointer;
 }
 
 .house .mySwiper {
     width: 100%;
-    height: 600px;
+    height: 500px;
 }
 
 .house .mySwiper img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
+
 .house .swiper-button-next,
 .house .swiper-button-prev {
     color: #fff !important;
@@ -114,80 +107,63 @@
 
 .house .swiper-button-next::after,
 .house .swiper-button-prev::after {
-    font-size: 15px !important;
+    font-size: 14px !important;
 }
-/* 1024px */
+
 @media (max-width: 1024px) {
-    .house {
-        height: auto;
-        padding: 20px;
-    }
-
-    .house .box {
-        height: auto;
-        gap: 35px;
-    }
-
     .house .results {
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-        height: auto;
-    }
-
-    .house .house-card {
-        height: auto;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 
     .house .mySwiper {
-        height: 450px;
+        height: 420px;
     }
 
     .house .card-info {
-        font-size: 18px;
+        font-size: 17px;
     }
 }
 
-/* 768px */
 @media (max-width: 768px) {
     .house .navHouse {
-        flex-wrap: wrap;
         gap: 20px;
     }
 
     .house .navHouse select {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .house .results {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 
     .house .mySwiper {
-        height: 320px;
+        height: 300px;
     }
 
     .house .card-info {
-        font-size: 17px;
+        font-size: 16px;
     }
 }
 
-/* 480px */
-@media (max-width: 480px) {
+@media (max-width: 425px) {
     .house {
-        padding: 15px;
+        padding: 10px;
     }
 
     .house .box {
-        gap: 25px;
+        gap: 20px;
     }
 
     .house .navHouse {
         flex-direction: column;
-        gap: 15px;
+        align-items: stretch;
+        gap: 12px;
     }
 
     .house .navHouse select {
         width: 100%;
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .house .results {
@@ -197,18 +173,18 @@
     }
 
     .house .mySwiper {
-        height: 250px;
+        height: 220px;
     }
 
     .house .card-info {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .house .fafaHeart {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .house .specs .fafaShopping {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
