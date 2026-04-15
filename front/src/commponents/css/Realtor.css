@@ -5,6 +5,7 @@
     flex-direction: column;
     gap: 40px;
     padding: 20px;
+    width: 100%;
 }
 
 .realtor h2 {
@@ -12,6 +13,7 @@
     color: #1b4332;
     text-shadow: 2px 2px 8px rgba(45, 106, 79, 0.8);
     text-align: center;
+    line-height: 1.3;
 }
 
 .realtor .box {
@@ -20,6 +22,8 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
+    width: 100%;
+    max-width: 1400px;
 }
 
 .realtor .box .real_result {
@@ -32,27 +36,43 @@
     overflow: hidden;
     max-width: 600px;
     width: 100%;
+    background: #fff;
 }
 
 .realtor .box .real_result img {
     width: 100%;
     height: 380px;
-    background-size: 100% 100%;
+    object-fit: cover;
 }
 
 .realtor .box .real_result p {
-    padding: 0 10px 10px;
+    padding: 0 10px 12px;
     font-size: 20px;
     color: #2d6a4f;
+    line-height: 1.5;
 }
 
 .realtor .box .real_result strong {
     color: #1b4332;
 }
 
+/* 1024px */
 @media (max-width: 1024px) {
+    .realtor {
+        gap: 35px;
+        padding: 18px;
+    }
+
     .realtor h2 {
         font-size: 34px;
+    }
+
+    .realtor .box {
+        gap: 20px;
+    }
+
+    .realtor .box .real_result {
+        max-width: 480px;
     }
 
     .realtor .box .real_result img {
@@ -64,9 +84,11 @@
     }
 }
 
+/* 768px */
 @media (max-width: 768px) {
     .realtor {
         gap: 30px;
+        padding: 15px;
     }
 
     .realtor h2 {
@@ -74,7 +96,11 @@
     }
 
     .realtor .box {
-        gap: 20px;
+        gap: 18px;
+    }
+
+    .realtor .box .real_result {
+        max-width: 100%;
     }
 
     .realtor .box .real_result img {
@@ -86,6 +112,7 @@
     }
 }
 
+/* 425px */
 @media (max-width: 425px) {
     .realtor {
         gap: 20px;
@@ -99,6 +126,7 @@
     .realtor .box {
         flex-direction: column;
         align-items: center;
+        gap: 15px;
     }
 
     .realtor .box .real_result {
@@ -111,5 +139,31 @@
 
     .realtor .box .real_result p {
         font-size: 15px;
+        padding: 0 8px 10px;
+    }
+}
+
+/* 375px */
+@media (max-width: 375px) {
+    .realtor {
+        padding: 8px;
+        gap: 18px;
+    }
+
+    .realtor h2 {
+        font-size: 20px;
+    }
+
+    .realtor .box .real_result {
+        border-radius: 8px;
+    }
+
+    .realtor .box .real_result img {
+        height: 190px;
+    }
+
+    .realtor .box .real_result p {
+        font-size: 14px;
+        line-height: 1.4;
     }
 }

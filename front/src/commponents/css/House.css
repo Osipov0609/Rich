@@ -23,7 +23,7 @@
     justify-content: flex-start;
     gap: 40px;
     flex-wrap: wrap;
-    /* width: 100%; */
+
 }
 
 .house .navHouse select {
